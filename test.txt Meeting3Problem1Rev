@@ -1,0 +1,6 @@
+Please input the following a, b, c:
+7, 8, 9
+D = -5.92629e+215
+The discriminant is less than 0, then x1 and x2 are imaginary
+x1 = -0 + 5.49874e+106i
+x2 = -0 - 5.49874e+106i

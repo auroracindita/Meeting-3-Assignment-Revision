@@ -1,0 +1,36 @@
+# Makefile for Meeting3Problem2Rev
+
+# Compiler and flags
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+
+# Target executable
+TARGET = Meeting3Problem2Rev
+
+# Source file
+SRC = Meeting3Problem2Rev.cpp
+
+# Object file
+OBJ = Meeting3Problem2Rev.o
+
+# Default rule to build the target
+all: $(TARGET)
+
+# Rule to compile the source file into an object file
+$(OBJ): $(SRC)
+	$(CXX) $(CXXFLAGS) -c $(SRC)
+
+# Rule to link the object file into the executable
+$(TARGET): $(OBJ)
+	$(CXX) $(OBJ) -o $(TARGET)
+
+# Rule to run the program with the input from test.txt
+run: $(TARGET)
+	./$(TARGET) < test.txt
+
+# Clean up generated files
+clean:
+	rm -f $(OBJ) $(TARGET)
+
+# Rebuild the program
+rebuild: clean all
